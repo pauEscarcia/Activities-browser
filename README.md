@@ -1,7 +1,8 @@
 # Activities-browser
 TrixDiscover
 
-![Image of Yaktocat](http://i67.tinypic.com/2nveau8.png)
+![Image of TrixDiscover](https://github.com/pauEscarcia/Activities-browser/blob/master/media/TrixDiscover.png)
+
 
 
 :two_hearts: 
@@ -32,5 +33,34 @@ Technology versions to use for the development:
 	* pass: root
 4. Run the project
 `python manage.py runserver` 
+
+##Migrate a project from sqlite3 to postgresql
+* Configure the settings.py file
+```
+DATABASES = {
+    'default': {
+#        'CONN_MAX_AGE': 0,
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'HOST': 'localhost',
+#        'NAME': 'project.db',
+#        'PASSWORD': '',
+#        'PORT': '',
+#        'USER': ''
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+         'NAME': 'TrixDiscover',
+         'USER': 'trixDiscover',
+         'PASSWORD': 'root',
+         'HOST': 'localhost',
+         'PORT': '5432',
+
+    }
+}
+```
+* Psycopg is a PostgreSQL adapter for the Python programming language. It is a wrapper for the libpq.
+ `pip install psycopg2` 
+* `python manage.py syncdb`
+* `manage.py makemigrations`
+* `manage.py migrate`
+* `python manage.py runserver`
 
 
