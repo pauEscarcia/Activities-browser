@@ -19,3 +19,18 @@ Technology versions to use for the development:
 * Programming language: Python v2.7
 * Python Framework CMS: Django v1.9.8
 * CMS Django v3.3.1
+
+##Getting Started with django CMS 
+1. Creating the virtual environment
+`virtualenv env`
+2. Activate the virtual environment
+`env\Scripts\activate`
+3. Install djangoCMS
+`pip install djangocms-installer` 
+	* Configured according to the project preferences
+	* user: trixdiscover
+	* pass: root
+4. Run the project
+`python manage.py runserver` 
+
+
