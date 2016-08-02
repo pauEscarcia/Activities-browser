@@ -1,0 +1,2 @@
+# Activities-browser
+TrixDiscover
